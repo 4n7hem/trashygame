@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    public int lifeScore;
+	public static GameManager instance;
+	public int lifeScore;
 
-    public bool playerDied;
-    
-    void Awake(){
-        MakeSingleton();
-    }
+	public bool playerDied;
+	
+	void Awake() {
+		MakeSingleton();
+	}
 
-    private void MakeSingleton(){
-        if (instance != null){
-            Destroy (gameObject);
-        }
-        else{
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-
-    }   
-    
+	private void MakeSingleton() {
+		if (instance != null) {
+			Destroy(gameObject);
+		}
+		else{
+			instance = this;
+			DontDestroyOnLoad(gameObject);
+		}
+	}
 }

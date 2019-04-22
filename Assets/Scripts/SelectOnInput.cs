@@ -3,28 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectOnInput : MonoBehaviour
-{
+public class SelectOnInput : MonoBehaviour {
+	[SerializeField]
+	private EventSystem eventSystem;
+	[SerializeField]
+	private GameObject selectedObject;
 
-    public EventSystem eventSystem;
-    public GameObject selectedObject;
+	private bool buttonSelected;
 
-    private bool buttonSelected;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	void Update() {
+		if (Input.GetAxisRaw("Vertical") != 0 && buttonSelected == false){
+			eventSystem.SetSelectedGameObject(selectedObject);
+			buttonSelected = true;
+		} 
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-       if (Input.GetAxisRaw("Vertical") !=0 && buttonSelected == false){
-           eventSystem.SetSelectedGameObject(selectedObject);
-           buttonSelected = true;
-       } 
-    }
-    private void OnDisable (){
-        buttonSelected = false;
-    }
+	private void OnDisable() {
+		buttonSelected = false;
+	}
 }

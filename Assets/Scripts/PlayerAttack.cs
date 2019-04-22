@@ -2,42 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
-{
-    private bool attacking = false;
+[RequireComponent(typeof(Animator))]
+public class PlayerAttack : MonoBehaviour {
+	private bool _attacking = false;
+	private bool attacking {
+		get {return _attacking;}
+		set {
+			_attacking = value;
+			if (anim != null) anim.SetBool("Attacking", attacking); 
+		}
+	}
 
-    private float attackTimer = 0;
-    private float attackCd = 0.2f;
+	[SerializeField]
+	private float attackTimer = 0;
+	[SerializeField]
+	private float attackCooldown = 0.2f;
+	private Animator anim;
 
-    public Collider2D attackTrigger;
+	void Awake() {
+		anim = gameObject.GetComponent<Animator>();
+	}
 
-    private Animator anim;
-
-    void Awake(){
-        anim = gameObject.GetComponent<Animator>();
-        attackTrigger.enabled = false;
-    }
-
-    void Update(){
-
-        if(Input.GetKeyDown("x") && !attacking){
-
-            attacking = true;
-            attackTimer = attackCd;
-            
-
-            attackTrigger.enabled = true;
-        }
-        if(attacking){
-            if (attackTimer > 0){
-
-                attackTimer -= Time.deltaTime;
-            }
-            else{
-                attacking = false;
-                attackTrigger.enabled = false;
-            }
-        }
-      anim.SetBool("Attacking", attacking); 
-    }
+	void Update() {
+		if (attacking) {
+			if (attackTimer > 0) {
+				attackTimer -= Time.deltaTime;
+			} else {
+				attacking = false;
+			}
+		} else if (Input.GetKeyDown("x")) {
+			attacking = true;
+			attackTimer = attackCooldown;
+		}
+	}
 }
