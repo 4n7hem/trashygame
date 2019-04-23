@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08a8b0203776b942ae4682f69916896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeMenuUI: {fileID: 0}
+  completeMenuUI: {fileID: 1568363317}
   levelAccess: Level2
 --- !u!61 &1196747302
 BoxCollider2D:
@@ -2278,6 +2278,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3784106570095527975, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: jumpTakeOffSpeed
@@ -2286,11 +2291,6 @@ PrefabInstance:
     - target: {fileID: 114230831923080080, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: isInputOn
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3784106570095527975, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2458,7 +2458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1568363318
 RectTransform:
   m_ObjectHideFlags: 0
