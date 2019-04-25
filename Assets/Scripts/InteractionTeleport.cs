@@ -16,7 +16,7 @@ public class InteractionTeleport : MonoBehaviour{
     [SerializeField] 
     private Transform teleport;
           
-    [Tooltip ("Trigger Event to Teleport")]
+    [Tooltip ("Trigger Event to Teleport")] //no clue of what this does
     [SerializeField] 
     TriggerType type;
     void Start(){
