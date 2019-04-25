@@ -12,9 +12,9 @@ public class InteractionTeleport : MonoBehaviour{
     [SerializeField]
     private GameObject zSprite;
  
-     [Tooltip ("The Transform to teleport to")]
+    [Tooltip ("The Transform to teleport to")]
     [SerializeField] 
-    private Transform teleportTo;
+    private Transform teleport;
           
     [Tooltip ("Trigger Event to Teleport")]
     [SerializeField] 
@@ -29,7 +29,7 @@ public class InteractionTeleport : MonoBehaviour{
             arrowSprite.SetActive(true);
             zSprite.SetActive(true);
             if(Input.GetKeyDown("z")){
-                other.transform.position = teleportTo.position;
+                other.transform.position = teleport.position;
             }
         }
     }
