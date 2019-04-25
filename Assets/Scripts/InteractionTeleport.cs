@@ -15,9 +15,7 @@ public class InteractionTeleport : MonoBehaviour{
      [Tooltip ("The Transform to teleport to")]
     [SerializeField] 
     private Transform teleportTo;
-    
- 
-      
+          
     [Tooltip ("Trigger Event to Teleport")]
     [SerializeField] 
     TriggerType type;
@@ -26,17 +24,17 @@ public class InteractionTeleport : MonoBehaviour{
     void Update(){    
     }
 
-     void OnTriggerEnter2D(Collider2D other){
-         if(other.CompareTag("Player")){
-             arrowSprite.SetActive(true);
-             zSprite.SetActive(true);
-             if(Input.GetKeyDown("z")){
-                 other.transform.position = teleportTo.position;
-             }
-         }
-     }
-     void OnTriggerExit2D(Collider2D other){
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Player")){
+            arrowSprite.SetActive(true);
+            zSprite.SetActive(true);
+            if(Input.GetKeyDown("z")){
+                other.transform.position = teleportTo.position;
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D other){
         arrowSprite.SetActive(false);
         zSprite.SetActive(false);
-     }
+    }
 }
