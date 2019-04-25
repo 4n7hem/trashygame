@@ -1,0 +1,42 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent (typeof (Collider2D))]
+public class InteractionTeleport : MonoBehaviour{
+
+    public enum TriggerType {Enter, Exit};
+    
+    [SerializeField]
+    private GameObject arrowSprite;
+    [SerializeField]
+    private GameObject zSprite;
+ 
+     [Tooltip ("The Transform to teleport to")]
+    [SerializeField] 
+    private Transform teleportTo;
+    
+ 
+      
+    [Tooltip ("Trigger Event to Teleport")]
+    [SerializeField] 
+    TriggerType type;
+    void Start(){
+    }
+    void Update(){    
+    }
+
+     void OnTriggerEnter2D(Collider2D other){
+         if(other.CompareTag("Player")){
+             arrowSprite.SetActive(true);
+             zSprite.SetActive(true);
+             if(Input.GetKeyDown("z")){
+                 other.transform.position = teleportTo.position;
+             }
+         }
+     }
+     void OnTriggerExit2D(Collider2D other){
+        arrowSprite.SetActive(false);
+        zSprite.SetActive(false);
+     }
+}
