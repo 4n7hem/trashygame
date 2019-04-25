@@ -24,13 +24,16 @@ public class InteractionTeleport : MonoBehaviour{
     void Update(){    
     }
 
+    void OnTriggerStay2D(Collider2D other){
+        if(Input.GetKeyDown("z")){
+                other.transform.position = teleport.position;
+            }
+    }
+
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player")){
             arrowSprite.SetActive(true);
             zSprite.SetActive(true);
-            if(Input.GetKeyDown("z")){
-                other.transform.position = teleport.position;
-            }
         }
     }
     void OnTriggerExit2D(Collider2D other){
