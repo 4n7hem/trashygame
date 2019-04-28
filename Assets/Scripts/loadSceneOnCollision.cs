@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class loadSceneOnCollision : MonoBehaviour {
+public class LoadSceneOnCollision : MonoBehaviour {
 	[SerializeField]
 	private GameObject completeMenuUI;
 	[SerializeField]

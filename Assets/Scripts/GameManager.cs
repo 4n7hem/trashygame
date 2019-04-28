@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
 	public static GameManager instance;
 	public int lifeScore;
-
 	public bool playerDied;
 	
 	void Awake() {
@@ -16,8 +14,7 @@ public class GameManager : MonoBehaviour
 	private void MakeSingleton() {
 		if (instance != null) {
 			Destroy(gameObject);
-		}
-		else{
+		} else {
 			instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
