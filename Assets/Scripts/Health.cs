@@ -17,7 +17,7 @@ public class Health : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		DamagingObject DO = col.GetComponent<DamagingObject>();
-		if (!DO.Equals(null)) {
+		if (DO != (null)) {
 			this.health -= DO.Loss;
 		}
 	}
