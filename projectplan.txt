@@ -1,0 +1,69 @@
+Everything that is desire to exist on the game:
+-------------------------------------------------
+General
+	Make the game able in a way to have a mobile port.(would really give some extra credits)
+	Make it completely functional so it has a start and an end.
+	
+
+Main Menu
+	Play button
+		Make a select character option(at least thats what the potatoes want)
+	Options button
+		Make the volume drawers work
+		Make resolution settings, maybe		
+	Credits button
+		Rewrite it so it credits the right people
+	Quit button
+		Works as intended.
+
+Gameplay
+	Make the player attack (melee)
+	Make the player walk
+	Make the player roll (maybe)
+	Make the player able to take damage
+	Create a system to record that damage visually
+
+	Make viable enemy behaviours (all melee)
+		Enemy attacks
+		Enemy turns when you go to his back
+		Enemy animations work
+	Make viable boss fight
+		Attacc
+		Protecc
+		But mostly importantly, he dies, explodes and never go bacc
+	
+	Make a system to get collectable items(and show them accordinly)
+	Make teleport systems (both on collision and on interaction)
+	Make breakable walls
+	
+	Make a pause button
+
+	Make NPC interactions (only one, at the very beginning)
+
+Scenario
+	Make good looking level 1 (Subway entrance)
+		Background
+		Map design and pretty tiles
+		Enemy sprites
+		Sounds of steps and bgmusic
+		Lights and particle effects
+	Make good looking level 2 (Subway train)
+		Background (includes a moving animation of a train rolling)
+		Enemies
+		Sounds and bgmusic		
+	Make good looking level 3 (Campus)
+		Background
+		A damn  good looking boss sprite
+		A damn good boss fight music and that necessarily gotta be royalty free cause my teacher is a duck
+		Victory(???)
+---------------------------------------------------------------------------------------------------------------------
+-Below here, everything is exclusively optional, but it would be a great polishment to actually add them-
+---------------------------------------------------------------------------------------------------------------------
+Wall on the first wagon of level 2 is breakable, allowing you to jump off the train, acessing the sewers (secret boss fight)
+Using konami code on level 3 would make a completely different boss fight (another secret boss fight, maybe just stick jevil in there dunno)
+Achievements, so the player would keep track of all the secrets
+Collectables?
+Make so that that one single interaction on the very beginning actually holds a crap load of secrets
+Level selection unlocked when one ends the game for the first time
+Also saving whatever their progress is so things from other levels interact with each other
+		
