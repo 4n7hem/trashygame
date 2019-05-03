@@ -24,8 +24,8 @@ Gameplay
 	Create a system to record that damage visually
 
 	Make viable enemy behaviours (all melee)
-		Enemy attacks
-		Enemy turns when you go to his back
+		Enemy attacks(03/05)
+		Enemy turns when you go to his back(28/04)
 		Enemy animations work
 	Make viable boss fight
 		Attacc
