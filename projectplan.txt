@@ -5,9 +5,9 @@ General
 	Make it completely functional so it has a start and an end.
 	
 
-Main Menu
+Main Menu (27/03)
 	Play button
-		Make a select character option(at least thats what the potatoes want)
+		Make a select character option(at least thats what the potatoes want)(
 	Options button
 		Make the volume drawers work
 		Make resolution settings, maybe		
@@ -17,8 +17,8 @@ Main Menu
 		Works as intended.
 
 Gameplay
-	Make the player attack (melee)
-	Make the player walk
+	Make the player attack (melee)(22/04) - iquick
+	Make the player walk - (06/04)
 	Make the player roll (maybe)
 	Make the player able to take damage
 	Create a system to record that damage visually
@@ -41,13 +41,13 @@ Gameplay
 	Make NPC interactions (only one, at the very beginning)
 
 Scenario
-	Make good looking level 1 (Subway entrance)
-		Background
+	Make good looking level 1 (Subway entrance)(16/04)
+		Background(16/04)
 		Map design and pretty tiles
 		Enemy sprites
 		Sounds of steps and bgmusic
 		Lights and particle effects
-	Make good looking level 2 (Subway train)
+	Make good looking level 2 (Subway train)(22/04)
 		Background (includes a moving animation of a train rolling)
 		Enemies
 		Sounds and bgmusic		
