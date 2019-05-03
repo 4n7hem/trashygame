@@ -7,7 +7,7 @@ General
 
 Main Menu (27/03)
 	Play button
-		Make a select character option(at least thats what the potatoes want)(
+		Make a select character option(at least thats what the potatoes want)
 	Options button
 		Make the volume drawers work
 		Make resolution settings, maybe		
@@ -33,7 +33,7 @@ Gameplay
 		But mostly importantly, he dies, explodes and never go bacc
 	
 	Make a system to get collectable items(and show them accordinly)
-	Make teleport systems (both on collision and on interaction)
+	Make teleport systems (both on collision and on interaction)(23/04)
 	Make breakable walls
 	
 	Make a pause button
@@ -42,7 +42,7 @@ Gameplay
 
 Scenario
 	Make good looking level 1 (Subway entrance)(16/04)
-		Background(16/04)
+		Background
 		Map design and pretty tiles
 		Enemy sprites
 		Sounds of steps and bgmusic
