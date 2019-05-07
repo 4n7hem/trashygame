@@ -61,7 +61,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			}
 			else if (magicTimer > 0){
 				magicTimer -= Time.deltaTime;
-				if(magicTimer <= attackCooldown){
+				if(magicTimer <= magicCooldown - 3.0f){
 					_casting = true;
 				}
 				else{
@@ -73,7 +73,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		if(_casting == true){
 			selection = Random.Range(1,3);
 			movable = false;
-			if(selection == 1){
+			if(selection == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
 				Instantiate(missile, transform.position, transform.rotation);
 			}				
 		}

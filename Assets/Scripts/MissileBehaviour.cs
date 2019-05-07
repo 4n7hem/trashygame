@@ -6,7 +6,10 @@ public class MissileBehaviour : MonoBehaviour{
 
     public float speed = 0;
 	public float rotatingSpeed= 0;
-	public GameObject target;   
+	public GameObject target; 
+
+    public float lifeTime = 9f;
+    public float passedTime = 0;  
 
 	public Rigidbody2D rb;
 
@@ -17,7 +20,13 @@ public class MissileBehaviour : MonoBehaviour{
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {	
+    void Update(){
+        passedTime += Time.deltaTime;
+        if (passedTime >= lifeTime){
+            Destroy (this.gameObject);
+        }
+    }
+	void FixedUpdate (){	
 		Vector3 point2Target = transform.position - target.transform.position;
 		point2Target.Normalize ();
 		float value = Vector3.Cross (point2Target, transform.right).z;
@@ -28,8 +37,8 @@ public class MissileBehaviour : MonoBehaviour{
 	}    
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag != "deadly") {
-				Destroy (this.gameObject, 0.02f);
+		if (other.tag != "Boss") {
+			Destroy (this.gameObject, 0.02f);
 
 		}
 	}
