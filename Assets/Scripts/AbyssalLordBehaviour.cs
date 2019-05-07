@@ -7,7 +7,9 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public Transform Target;
 	public Rigidbody2D rigidbody;
 	public Collider2D damager;
+	public GameObject missile;
 
+	public int selection;
 	public float speed;
 	public float gravity = 9.8f;
 	public float attackTimer = 0;
@@ -36,7 +38,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		rigidbody = GetComponent<Rigidbody2D>();
 		oldPosition = transform.position.x;
 		normalScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-		invertedScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+		invertedScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);		
         _attacking = false;
         _running = false;
 	}
@@ -69,8 +71,14 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		}
 		//how it casts magic
 		if(_casting == true){
-			int selection = Random.Range(1,3);
-			movable = false;	
+			selection = Random.Range(1,3);
+			movable = false;
+			if(selection == 1){
+				Instantiate(missile, transform.position, transform.rotation);
+			}				
+		}
+		else if(_casting == false){
+			selection = 0;
 		}
 		//how the hitbox waits between each attack
 		if(_attacking == true){
