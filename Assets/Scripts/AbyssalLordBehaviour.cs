@@ -8,6 +8,13 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public Rigidbody2D rigidbody;
 	public Collider2D damager;
 	public GameObject missile;
+	public GameObject spike;
+
+	public Vector3 array1;
+	public Vector3 array2;
+	public Vector3 array3;
+	public Vector3 array4;
+	public Vector3 array5;
 
 	public int selection;
 	public float speed;
@@ -75,6 +82,33 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			movable = false;
 			if(selection == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
 				Instantiate(missile, transform.position, transform.rotation);
+			}
+			else if(selection == 2 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
+				bool created1 = true;
+				bool created2 = true;
+				bool created3 = true;
+				bool created4 = true;
+				bool created5 = true;
+				if(created1){
+					Instantiate(spike, array1, transform.rotation);
+					created1 = false;
+				}
+				if(created2){
+					Instantiate(spike, array2, transform.rotation);
+					created2 = false;
+				}
+				if(created3){
+					Instantiate(spike, array3, transform.rotation);
+					created3 = false;
+				}
+				if(created4){
+					Instantiate(spike, array4, transform.rotation);
+					created4 = false;
+				}
+				if(created5){
+					Instantiate(spike, array5, transform.rotation);
+					created5 = false;
+				}	
 			}				
 		}
 		else if(_casting == false){
