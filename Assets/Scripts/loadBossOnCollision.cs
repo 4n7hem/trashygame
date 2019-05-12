@@ -8,6 +8,7 @@ public class loadBossOnCollision : MonoBehaviour
     public Camera camera;
     public Transform cameraT;
     public Transform cameraArray;
+    public GameObject healthBar;
     public GameObject boss;
     public GameObject wall1;
     public GameObject wall2;
@@ -26,6 +27,7 @@ public class loadBossOnCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         cameraS.enabled = false;
         cameraT.transform.position = cameraArray.position;
+        healthBar.active = true;
         wall1.active = true;
         wall2.active = true;
         boss.active = true;

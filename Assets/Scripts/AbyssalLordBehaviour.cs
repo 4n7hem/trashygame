@@ -1,22 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbyssalLordBehaviour : MonoBehaviour{
  
 	public Transform Target;
 	public Rigidbody2D rigidbody;
+	public Health health;
 	public Collider2D damager;
 	public GameObject missile;
 	public GameObject spike;
+	public Slider healthBar;
 
 	public Vector3 array1;
 	public Vector3 array2;
 	public Vector3 array3;
 	public Vector3 array4;
 	public Vector3 array5;
-
-	public int selection;
+	
 	public float speed;
 	public float gravity = 9.8f;
 	public float attackTimer = 0;
@@ -36,6 +38,8 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	private Vector3 normalScale;
 	private Vector3 invertedScale;
     private bool movable = true;
+	private System.Random selection = new System.Random();
+	
 
 	private Animator animator;
 
@@ -43,6 +47,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		animator = GetComponent<Animator>();
 		rigidbody = GetComponent<Rigidbody2D>();
+		health = GetComponent<Health>();
 		oldPosition = transform.position.x;
 		normalScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		invertedScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);		
@@ -51,6 +56,8 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	}
 
 	void Update() {
+		//health check
+		healthBar.value = health.health;
         //if it should move
         if(movable == false){
             _running = false;
@@ -78,12 +85,16 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		}
 		//how it casts magic
 		if(_casting == true){
-			selection = Random.Range(1,3);
+			int random = selection.Next(1,3);
 			movable = false;
-			if(selection == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
-				Instantiate(missile, transform.position, transform.rotation);
+			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
+				bool created1 = true;
+				if(created1){
+					Instantiate(missile, transform.position, transform.rotation);
+					created1 = false;
+				}	
 			}
-			else if(selection == 2 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
+			else if(random == 2 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
 				bool created1 = true;
 				bool created2 = true;
 				bool created3 = true;
@@ -112,7 +123,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			}				
 		}
 		else if(_casting == false){
-			selection = 0;
+			
 		}
 		//how the hitbox waits between each attack
 		if(_attacking == true){
@@ -121,7 +132,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			}
 			else if (attackTimer > 0){
 				attackTimer -= Time.deltaTime;
-				if(attackTimer <= attackCooldown - 0.66f && attackTimer > attackCooldown - 1.2f){
+				if(attackTimer <= attackCooldown - 0.66f && attackTimer > attackCooldown - 1.2f && _casting == false){
 					damager.enabled = true;					
 				}
 				else {
