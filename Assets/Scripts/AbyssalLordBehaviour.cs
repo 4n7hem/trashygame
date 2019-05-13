@@ -40,6 +40,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	private float vx;
 	private float vy;
 	private bool facingRight;
+	private int random;
 	private float oldPosition = 0.0f;
 	private Vector3 normalScale;
 	private Vector3 invertedScale;
@@ -103,7 +104,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		}
 		//how it casts magic
 		if(_casting == true && _dying != true && _dead != true){
-			int random = selection.Next(1,3);
+			this.RandomNumber();
 			movable = false;
 			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
 				bool created1 = true;
@@ -214,5 +215,8 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		if (facingRight == true){
 			transform.localScale = normalScale;
 		} 
+	}
+	public void RandomNumber(){
+		random = selection.Next(1,3);
 	}
 }
