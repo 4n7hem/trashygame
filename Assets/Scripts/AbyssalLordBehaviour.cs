@@ -25,11 +25,17 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public float attackCooldown = 1.33f;
 	public float magicTimer = 0;
 	public float magicCooldown = 7.0f;
+	public float deathTimer = 0;
+	public float deathDuration = 1.0f;
 	public int distance;
 	public float huntDistance;
+
 	public bool _running;
 	public bool _attacking;
 	public bool _casting;
+	public bool _dying;
+	public bool _dead;
+
 	private bool magicAble;
 	private float vx;
 	private float vy;
@@ -58,13 +64,25 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	void Update() {
 		//health check
 		healthBar.value = health.health;
+		//always checking the hp
+		if (health.health <= 0){
+			movable = false;			
+			_casting = false;
+			_attacking = false;
+			_running = false;
+			_dying = true;
+			if(deathTimer >= deathDuration){
+				_dying = false;
+				_dead = true;
+			}
+		}
         //if it should move
         if(movable == false){
             _running = false;
-            if(_attacking == false){
+            if(_attacking == false && _dying != true){
                 _attacking = true;				
             }
-            if (Vector3.Distance(transform.position, Target.position) > distance) {
+            else if (Vector3.Distance(transform.position, Target.position) > distance) {
                 movable = true;                
             }
         }
@@ -84,7 +102,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			}
 		}
 		//how it casts magic
-		if(_casting == true){
+		if(_casting == true && _dying != true && _dead != true){
 			int random = selection.Next(1,3);
 			movable = false;
 			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
@@ -130,7 +148,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			if(attackTimer <= 0){
 				attackTimer = attackCooldown;
 			}
-			else if (attackTimer > 0){
+			else if (attackTimer > 0 && _dying != true && _dead != true){
 				attackTimer -= Time.deltaTime;
 				if(attackTimer <= attackCooldown - 0.66f && attackTimer > attackCooldown - 1.2f && _casting == false){
 					damager.enabled = true;					
@@ -176,7 +194,17 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		 animator.SetBool("attacking", _attacking);
 		 animator.SetBool("running", _running);
 		 animator.SetBool("casting", _casting);
+		 animator.SetBool("dying", _dying);
+		 animator.SetBool("dead", _dead);
+
+		//another timer, yay
+		 if(_dying == true){
+			deathTimer += Time.deltaTime;
+		}		
 	}
+	
+	//how it checks if its alive
+	
 	
 	//how it changes the sides
 	public void ChangeDirection(){
