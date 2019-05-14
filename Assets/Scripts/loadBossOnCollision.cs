@@ -19,9 +19,13 @@ public class loadBossOnCollision : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        if(boss == null){
+            wall1.active = false;
+            wall2.active = false;
+            cameraS.enabled = true;
+            this.enabled = false;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){

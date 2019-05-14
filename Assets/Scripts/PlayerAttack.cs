@@ -4,7 +4,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 public class PlayerAttack : MonoBehaviour {
-	private bool _attacking = false;
+	public Collider2D col;
+	private bool _attacking = false;	
 	private bool attacking {
 		get {return _attacking;}
 		set {
@@ -23,8 +24,9 @@ public class PlayerAttack : MonoBehaviour {
 		anim = gameObject.GetComponent<Animator>();
 	}
 
-	void Update() {
-		if (attacking) {
+	void FixedUpdate() {
+		if (attacking){
+			this.EnablingCollider();						
 			if (attackTimer > 0) {
 				attackTimer -= Time.deltaTime;
 			} else {
@@ -33,6 +35,14 @@ public class PlayerAttack : MonoBehaviour {
 		} else if (Input.GetKeyDown("x")) {
 			attacking = true;
 			attackTimer = attackCooldown;
+		}		
+	}
+	public void EnablingCollider(){
+		if(attacking == true){
+			col.enabled = true;
+		}
+		else{	
+		col.enabled = false;
 		}
 	}
 }

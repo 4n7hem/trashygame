@@ -1672,6 +1672,16 @@ PrefabInstance:
       propertyPath: jumpTakeOffSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 3201859735782883004, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: col
+      value: 
+      objectReference: {fileID: 733512156}
+    - target: {fileID: 7057053173321944291, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!1 &325087266
@@ -1780,7 +1790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
-  power: 3
+  col: {fileID: 0}
+  power: 20
   knockback: 0
 --- !u!1 &447531615
 GameObject:
@@ -1955,6 +1966,12 @@ RectTransform:
   m_AnchoredPosition: {x: -4.999939, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &733512156 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7057053173321944291, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+    type: 3}
+  m_PrefabInstance: {fileID: 188263336}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &759859389 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1746852626732201120, guid: f76143e48dac0d045ab5c8ed53965caa,
