@@ -2015,6 +2015,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5212910924140710048, guid: 74da045a9ec5c7048a8737b0c20ac7c8,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5212910924140710048, guid: 74da045a9ec5c7048a8737b0c20ac7c8,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1923982699}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74da045a9ec5c7048a8737b0c20ac7c8, type: 3}
 --- !u!1 &585639239
