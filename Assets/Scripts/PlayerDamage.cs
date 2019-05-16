@@ -19,17 +19,14 @@ public class PlayerDamage : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if(knockback == true){
-            if(rigid == null){
-                return;
-            }
+        if(knockback == true){            
             Vector2 velocity = rigid.velocity;
-            rigid.AddForce( velocity* power, ForceMode2D.Impulse);            
+            rigid.AddForce(velocity * power, ForceMode2D.Impulse);            
         }        
     }
 
-    void OnTriggerStay2D(Collider2D other){
-        if(other.tag == "Enemy Attack"){        
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.CompareTag("Enemy Attack")){        
             knockback = true;
         }            
     }

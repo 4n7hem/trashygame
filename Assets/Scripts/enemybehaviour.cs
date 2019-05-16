@@ -14,12 +14,16 @@ public class enemybehaviour : MonoBehaviour {
 	public float gravity = 9.8f;
 	public float attackTimer = 0;
 	public float attackCooldown = 1.33f;
+	public float deathTimer = 0;
+	public float deathDuration = 1f;
 
 	public float distance;
 	public float huntDistance;
 	public bool _running;
 	public bool _attacking;
 	public bool movable;
+	public bool _dying;
+	public bool _dead;
 
 	private float vx;
 	private float vy;
@@ -46,7 +50,16 @@ public class enemybehaviour : MonoBehaviour {
 			movable = false;
 			_attacking = false;
 			_running = false;
-		}		
+			_dying = true;
+			if(deathTimer >= deathDuration){
+				_dying = false;
+				_dead = true;
+			}
+		}
+		//another timer, yay
+		 if(_dying == true){
+			deathTimer += Time.deltaTime;
+		}				
 		//if it should move
         if(movable == false){
             _running = false;
@@ -106,6 +119,7 @@ public class enemybehaviour : MonoBehaviour {
          oldPosition = transform.position.x; // update the variable with the new position so we can chack against it next frame
 		 animator.SetBool("attacking", _attacking);
 		 animator.SetBool("running", _running);
+		 animator.SetBool("dying", _dying);
 	}
 	
 	

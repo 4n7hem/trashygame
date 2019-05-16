@@ -5,6 +5,7 @@ public class Health : MonoBehaviour {
 	private Force _force;
 	public int maxHealth;
 	private int _health;
+	public float destroyTime;
 	public int health {
 		get {return _health;}
 		set {
@@ -27,7 +28,7 @@ public class Health : MonoBehaviour {
 	}
 
 	public void Die() {
-		Destroy(this.gameObject, 10f);
+		Destroy(this.gameObject, destroyTime);
 	}
 }
 

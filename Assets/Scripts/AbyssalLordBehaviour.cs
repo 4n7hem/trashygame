@@ -204,9 +204,6 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		}		
 	}
 	
-	//how it checks if its alive
-	
-	
 	//how it changes the sides
 	public void ChangeDirection(){
 		if (facingRight == false){
