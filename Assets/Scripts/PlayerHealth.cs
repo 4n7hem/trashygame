@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour{
     public GameObject heart4;
     public GameObject heart5;
 
-    public int health = 5;
+    public int health = 10;
     public bool dead = false;
 
     // Start is called before the first frame update
@@ -21,32 +21,32 @@ public class PlayerHealth : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        if(health >= 1){
+        if(health >= 2){
             heart1.SetActive(true);
         }
         else{
             heart1.SetActive(false);
             dead = true;
         }
-        if(health >= 2){
+        if(health >= 4){
             heart2.SetActive(true);
         }
         else{
             heart2.SetActive(false);
         }
-        if(health >= 3){
+        if(health >= 6){
             heart3.SetActive(true);
         }
         else{
             heart3.SetActive(false);
         }
-        if(health >= 4){
+        if(health >= 8){
             heart4.SetActive(true);
         }
         else{
             heart4.SetActive(false);
         }
-        if(health >= 5){
+        if(health >= 10){
             heart5.SetActive(true);
         }
         else{
