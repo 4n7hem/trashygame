@@ -12,6 +12,8 @@ public class loadBossOnCollision : MonoBehaviour
     public GameObject boss;
     public GameObject wall1;
     public GameObject wall2;
+    public GameObject music1;
+    public GameObject music2;
     // Start is called before the first frame update
     void Start()
     {        
@@ -24,6 +26,8 @@ public class loadBossOnCollision : MonoBehaviour
             wall1.active = false;
             wall2.active = false;
             cameraS.enabled = true;
+            music1.active = true;
+            music2.active = false;
             this.enabled = false;
         }
     }
@@ -35,6 +39,8 @@ public class loadBossOnCollision : MonoBehaviour
         wall1.active = true;
         wall2.active = true;
         boss.active = true;
+        music1.active = false;
+        music2.active = true;
 
     }
 }
