@@ -21,11 +21,11 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	
 	public float speed;
 	public float gravity = 9.8f;
-	public float attackTimer = 0;
+	private float attackTimer = 0;
 	public float attackCooldown = 1.33f;
-	public float magicTimer = 0;
+	private float magicTimer = 0;
 	public float magicCooldown = 7.0f;
-	public float deathTimer = 0;
+	private float deathTimer = 0;
 	public float deathDuration = 1.0f;
 	public int distance;
 	public float huntDistance;
@@ -94,7 +94,10 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			}
 			else if (magicTimer > 0){
 				magicTimer -= Time.deltaTime;
-				if(magicTimer <= magicCooldown - 3.0f){
+				if(magicTimer <= magicCooldown - 1.0f && magicTimer >= magicCooldown - 2.9f){
+					random = selection.Next(1,3);
+				}
+				else if(magicTimer <= magicCooldown - 3.0f){
 					_casting = true;
 				}
 				else{
@@ -104,7 +107,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		}
 		//how it casts magic
 		if(_casting == true && _dying != true && _dead != true){
-			this.RandomNumber();
+			
 			movable = false;
 			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
 				bool created1 = true;
@@ -113,7 +116,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 					created1 = false;
 				}	
 			}
-			else if(random == 2 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
+			else if(random == 2 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.01f)){
 				bool created1 = true;
 				bool created2 = true;
 				bool created3 = true;
@@ -191,12 +194,12 @@ public class AbyssalLordBehaviour : MonoBehaviour{
                 transform.localScale = invertedScale;
             }
         }
-         oldPosition = transform.position.x; // update the variable with the new position so we can chack against it next frame
-		 animator.SetBool("attacking", _attacking);
-		 animator.SetBool("running", _running);
-		 animator.SetBool("casting", _casting);
-		 animator.SetBool("dying", _dying);
-		 animator.SetBool("dead", _dead);
+        oldPosition = transform.position.x; // update the variable with the new position so we can chack against it next frame
+		animator.SetBool("attacking", _attacking);
+		animator.SetBool("running", _running);
+		animator.SetBool("casting", _casting);
+		animator.SetBool("dying", _dying);
+		animator.SetBool("dead", _dead);
 
 		//another timer, yay
 		 if(_dying == true){
@@ -212,8 +215,5 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		if (facingRight == true){
 			transform.localScale = normalScale;
 		} 
-	}
-	public void RandomNumber(){
-		random = selection.Next(1,3);
-	}
+	}	
 }
