@@ -11,6 +11,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public Collider2D damager;
 	public GameObject missile;
 	public GameObject spike;
+	public GameObject music2;
 	public Slider healthBar;
 
 	public Vector3 array1;
@@ -40,7 +41,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	private float vx;
 	private float vy;
 	private bool facingRight;
-	private int random;
+	public int random;
 	private float oldPosition = 0.0f;
 	private Vector3 normalScale;
 	private Vector3 invertedScale;
@@ -72,6 +73,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			_attacking = false;
 			_running = false;
 			_dying = true;
+			music2.active = false;
 			if(deathTimer >= deathDuration){
 				_dying = false;
 				_dead = true;
@@ -109,7 +111,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		if(_casting == true && _dying != true && _dead != true){
 			
 			movable = false;
-			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.05f)){
+			if(random == 1 && (magicTimer< magicCooldown - 4.0f && magicTimer > magicCooldown - 4.02f)){
 				bool created1 = true;
 				if(created1){
 					Instantiate(missile, transform.position, transform.rotation);
@@ -148,17 +150,18 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			
 		}
 		//how the hitbox waits between each attack
-		if(_attacking == true){
-			if(attackTimer <= 0){
-				attackTimer = attackCooldown;
+		if(_attacking == true){			
+			if(attackTimer > attackCooldown){
+				attackTimer = 0;
 			}
-			else if (attackTimer > 0 && _dying != true && _dead != true){
-				attackTimer -= Time.deltaTime;
-				if(attackTimer <= attackCooldown - 0.66f && attackTimer > attackCooldown - 1.2f && _casting == false){
+			else if (attackTimer <= attackCooldown && _dying != true && _dead != true){
+				attackTimer += Time.deltaTime;				
+				if(attackTimer >= attackCooldown - 1.0f && attackTimer < attackCooldown - 0.3f && _casting == false){
 					damager.enabled = true;					
 				}
 				else {
 					damager.enabled = false;
+					
 				}												
 			}			
 		}
@@ -167,6 +170,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			_running = true;			
 			damager.enabled = false;
             _attacking = false;
+			attackTimer = 0;
 			magicAble = true;
             transform.position = Vector3.MoveTowards(transform.position, Target.position, speed * Time.deltaTime);			
 			if (Vector3.Distance(transform.position, Target.position) <= distance) {

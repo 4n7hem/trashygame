@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour{
         
     }
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Enemy Attack")){                
+        if(other.CompareTag("Enemy Attack")||other.CompareTag("Enemy Spell")){                
             health -= 1;
         }
     }

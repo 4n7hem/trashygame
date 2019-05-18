@@ -37,7 +37,7 @@ public class MissileBehaviour : MonoBehaviour{
 	}    
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag != "Boss" && other.tag != "Enemy Attack" && other.tag != "Background") {
+		if (other.tag != "Boss" && other.tag != "Enemy Attack" && other.tag != "Background" && other.tag != "Enemy Spell") {
 			Destroy (this.gameObject, 0.02f);
 
 		}

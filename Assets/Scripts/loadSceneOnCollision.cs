@@ -5,14 +5,21 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class LoadSceneOnCollision : MonoBehaviour {
-	[SerializeField]
-	private GameObject completeMenuUI;
-	[SerializeField]
-	private string levelAccess = "a";
+public class loadSceneOnCollision : MonoBehaviour {
+	
+	public GameObject completeMenuUI;	
+	public string levelAccess;
 	private float elapsedTime = 10.0f;
 	private bool isInputOn = true;
 	private float startTime;
+
+    void Start(){
+
+    }
+
+    void Update(){
+
+    }
 	 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Player")) {

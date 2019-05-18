@@ -8,6 +8,8 @@ TagManager:
   - Enemy Attack
   - Background
   - Enemy
+  - Enemy Spell
+  - Ground
   layers:
   - Default
   - TransparentFX

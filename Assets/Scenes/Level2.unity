@@ -402,6 +402,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3537665227387813767, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537665227387813767, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: heart1
+      value: 
+      objectReference: {fileID: 360053246}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: heart2
+      value: 
+      objectReference: {fileID: 1611222997}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: heart3
+      value: 
+      objectReference: {fileID: 1538531101}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: heart4
+      value: 
+      objectReference: {fileID: 515331221}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: heart5
+      value: 
+      objectReference: {fileID: 464948289}
+    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1140225070844918972, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: m_Name
@@ -462,46 +502,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3537665227387813767, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537665227387813767, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: heart1
-      value: 
-      objectReference: {fileID: 360053246}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: heart2
-      value: 
-      objectReference: {fileID: 1611222997}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: heart3
-      value: 
-      objectReference: {fileID: 1538531101}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: heart4
-      value: 
-      objectReference: {fileID: 515331221}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: heart5
-      value: 
-      objectReference: {fileID: 464948289}
-    - target: {fileID: 3537665227387813788, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
 --- !u!1 &249983166
@@ -543,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -467, y: 301}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -94, y: 107}
+  m_SizeDelta: {x: -145.8, y: -68.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249983168
 MonoBehaviour:
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
