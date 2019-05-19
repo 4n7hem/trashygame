@@ -31,5 +31,6 @@ public class loadSceneOnCollision : MonoBehaviour {
 
 	public void LoadLevel() {
 		SceneManager.LoadScene(levelAccess);
+		Time.timeScale = 1f;
 	}
 }

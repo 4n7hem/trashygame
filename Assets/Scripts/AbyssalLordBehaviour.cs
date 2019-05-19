@@ -150,10 +150,10 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			
 		}
 		//how the hitbox waits between each attack
-		if(_attacking == true){			
-			if(attackTimer > attackCooldown){
-				attackTimer = 0;
-			}
+		if(_attacking == true){
+			if(attackTimer == attackCooldown){
+				_attacking = false;
+			}				
 			else if (attackTimer <= attackCooldown && _dying != true && _dead != true){
 				attackTimer += Time.deltaTime;				
 				if(attackTimer >= attackCooldown - 1.0f && attackTimer < attackCooldown - 0.3f && _casting == false){
