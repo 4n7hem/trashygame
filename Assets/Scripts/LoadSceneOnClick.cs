@@ -4,7 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour {
+
+	public Animator animator;
+
+	private int level;
+	
 	public void LoadByIndex(int sceneIndex) {
-		SceneManager.LoadScene(sceneIndex);
+		level = sceneIndex;
+		animator.SetTrigger("Fade Out");
+	}
+	public void OnFadeComplete(){
+		SceneManager.LoadScene(level);
 	}
 }

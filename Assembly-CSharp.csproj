@@ -132,9 +132,11 @@
     <Compile Include="Assets\Scripts\CameraSeguePersonagem.cs" />
     <Compile Include="Assets\Scripts\DamagingObject.cs" />
     <Compile Include="Assets\Scripts\enemybehaviour.cs" />
+    <Compile Include="Assets\Scripts\FindGate.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\InteractionTeleport.cs" />
+    <Compile Include="Assets\Scripts\LevelFade.cs" />
     <Compile Include="Assets\Scripts\loadBossOnCollision.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\loadSceneOnCollision.cs" />
