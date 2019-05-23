@@ -5,31 +5,37 @@ using UnityEngine;
 public class PlayerDamage : MonoBehaviour{
 
     public Rigidbody2D rigid;
+    public Animator anim;
     public Transform trans;
     public Transform enemyTrans;   
     public Vector2 normalVelocity;   
 
     public float power = 300f;
     public bool knockback;
+    public bool damaged;
     public float knockbackDuration = 0.3f;
     private float knockTimer = 0;  
     
     // Start is called before the first frame update
     void Start(){
     rigid = GetComponent<Rigidbody2D>();
-    trans = GetComponent<Transform>(); 
+    trans = GetComponent<Transform>();
+    anim = GetComponent<Animator>(); 
     normalVelocity = rigid.velocity;   
-    knockback = false;    
+    knockback = false;
+    damaged = false;    
     }
 
     // Update is called once per frame
-    void FixedUpdate(){             
+    void FixedUpdate(){
+        anim.SetBool("hurt", damaged);
         if(knockback == true){
             knockTimer += Time.deltaTime;
             if(knockTimer >= knockbackDuration){
                 rigid.velocity = normalVelocity;
                 knockTimer = 0;
                 knockback = false;
+                damaged = false;
             }
             else{    
                 if((trans.position.x-enemyTrans.position.x)<=0){        
@@ -45,6 +51,7 @@ public class PlayerDamage : MonoBehaviour{
     void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Enemy Attack")){        
             knockback = true;
+            damaged = true;
             enemyTrans = other.GetComponent<Transform>();
         }            
     }
