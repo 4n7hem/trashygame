@@ -12,6 +12,8 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public GameObject missile;
 	public GameObject spike;
 	public GameObject music2;
+	public GameObject victory;
+	public AudioSource attackAudio;
 	public Slider healthBar;
 
 	public Vector3 array1;
@@ -68,12 +70,13 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		healthBar.value = health.health;
 		//always checking the hp
 		if (health.health <= 0){
+			victory.active = true;
 			movable = false;			
 			_casting = false;
 			_attacking = false;
 			_running = false;
 			_dying = true;
-			music2.active = false;
+			music2.active = false;			
 			if(deathTimer >= deathDuration){
 				_dying = false;
 				_dead = true;
@@ -150,17 +153,17 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 			
 		}
 		//how the hitbox waits between each attack
-		if(_attacking == true){
+		if(_attacking == true){			
 			if(attackTimer == attackCooldown){
 				_attacking = false;
 			}				
 			else if (attackTimer <= attackCooldown && _dying != true && _dead != true){
 				attackTimer += Time.deltaTime;				
 				if(attackTimer >= attackCooldown - 1.0f && attackTimer < attackCooldown - 0.3f && _casting == false){
-					damager.enabled = true;					
+					damager.enabled = true;									
 				}
 				else {
-					damager.enabled = false;
+					damager.enabled = false;		
 					
 				}												
 			}			
@@ -219,5 +222,10 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		if (facingRight == true){
 			transform.localScale = normalScale;
 		} 
-	}	
+	}
+
+	public void PlayAttackSound(){
+		attackAudio.Play();
+	}
+	
 }

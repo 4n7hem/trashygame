@@ -11,9 +11,10 @@ public class loadBossOnCollision : MonoBehaviour
     public GameObject healthBar;
     public GameObject boss;
     public GameObject wall1;
-    public GameObject wall2;
+    public GameObject wall2;    
     public GameObject music1;
     public GameObject music2;
+    public GameObject victory;    
     // Start is called before the first frame update
     void Start()
     {        
@@ -21,8 +22,9 @@ public class loadBossOnCollision : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void Update(){        
         if(boss == null){
+            victory.active = false;
             wall1.active = false;
             wall2.active = false;
             cameraS.enabled = true;

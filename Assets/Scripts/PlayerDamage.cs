@@ -8,7 +8,8 @@ public class PlayerDamage : MonoBehaviour{
     public Animator anim;
     public Transform trans;
     public Transform enemyTrans;   
-    public Vector2 normalVelocity;   
+    public Vector2 normalVelocity;
+    public GameObject audio;   
 
     public float power = 300f;
     public bool knockback;
@@ -52,7 +53,15 @@ public class PlayerDamage : MonoBehaviour{
         if(other.CompareTag("Enemy Attack")){        
             knockback = true;
             damaged = true;
+            audio.active = false;
+            audio.active = true;
             enemyTrans = other.GetComponent<Transform>();
+        }
+        else if(other.CompareTag("Enemy Spell")){
+            knockback = true;
+            damaged = true;
+            audio.active = false;
+            audio.active = true;
         }            
     }
 }

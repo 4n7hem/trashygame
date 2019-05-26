@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelFade : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public GameObject animation1;
+    public GameObject animation2;
+    public int levelIndex;
+
+    void SwitchAnimations(){
+        animation1.active = false;
+        animation2.active = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void TurnOnAnimations(){
+        animation2.active = true;
+    }
+
+    void LoadMenu(){
+        SceneManager.LoadScene(levelIndex);
     }
 }

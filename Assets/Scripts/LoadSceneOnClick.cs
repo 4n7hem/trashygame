@@ -7,10 +7,9 @@ public class LoadSceneOnClick : MonoBehaviour {
 
 	public Animator animator;
 
-	private int level;
+	public int level;
 	
-	public void LoadByIndex(int sceneIndex) {
-		level = sceneIndex;
+	public void LoadByIndex() {		
 		animator.SetTrigger("Fade Out");
 	}
 	public void OnFadeComplete(){
