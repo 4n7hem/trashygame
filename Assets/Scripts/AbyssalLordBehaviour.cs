@@ -14,6 +14,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public GameObject music2;
 	public GameObject victory;
 	public AudioSource attackAudio;
+	public AudioSource magicAudio;
 	public Slider healthBar;
 
 	public Vector3 array1;
@@ -226,6 +227,9 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 
 	public void PlayAttackSound(){
 		attackAudio.Play();
+	}
+	public void PlayMagicSound(){
+		magicAudio.Play();
 	}
 	
 }

@@ -19,6 +19,7 @@ public class PlayerAttack : MonoBehaviour {
 	[SerializeField]
 	private float attackCooldown = 0.2f;
 	private Animator anim;
+	public AudioSource slash;
 
 	void Awake() {
 		anim = gameObject.GetComponent<Animator>();
@@ -34,6 +35,7 @@ public class PlayerAttack : MonoBehaviour {
 			}
 		} else if (Input.GetKeyDown("x")) {
 			attacking = true;
+			slash.Play();
 			attackTimer = attackCooldown;
 		}		
 	}

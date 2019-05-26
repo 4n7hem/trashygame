@@ -3138,11 +3138,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
+  anim: {fileID: 0}
   trans: {fileID: 0}
   enemyTrans: {fileID: 0}
   normalVelocity: {x: 0, y: 0}
+  audio: {fileID: 0}
   power: 10
   knockback: 0
+  damaged: 0
   knockbackDuration: 0.4
 --- !u!1 &2019522630 stripped
 GameObject:
@@ -3169,6 +3172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: {fileID: 1196747301}
+  intEx: {fileID: 0}
+  click: {fileID: 0}
 --- !u!1 &2061368036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,6 +3415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326510055553777450, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
