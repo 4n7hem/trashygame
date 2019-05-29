@@ -14,11 +14,11 @@ GameObject:
   - component: {fileID: 6124881378040992797}
   m_Layer: 10
   m_Name: Damager
-  m_TagString: Untagged
+  m_TagString: Enemy Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6901951524998382282
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 8277716828366285196}
   m_Layer: 0
   m_Name: Chomper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +273,7 @@ MonoBehaviour:
   movable: 0
   _dying: 0
   _dead: 0
+  facingRight: 0
 --- !u!114 &3546308916340717121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +306,7 @@ MonoBehaviour:
   trans: {fileID: 0}
   enemyTrans: {fileID: 0}
   normalVelocity: {x: 0, y: 0}
-  power: 3
+  power: 10
   knockback: 0
   damaged: 0
   knockbackDuration: 0.3

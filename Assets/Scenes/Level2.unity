@@ -428,6 +428,21 @@ PrefabInstance:
       propertyPath: continuar
       value: 
       objectReference: {fileID: 1481062572}
+    - target: {fileID: 5671721810352687612, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671721810352687612, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874459475469676936, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1140225070844918972, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
         type: 3}
       propertyPath: m_Name
@@ -487,16 +502,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5671721810352687612, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5671721810352687612, guid: 7d60c822c3f1b408ea7a00ecdb5e047a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player Attack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d60c822c3f1b408ea7a00ecdb5e047a, type: 3}
@@ -2573,7 +2578,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3704,6 +3709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player is Dead
       objectReference: {fileID: 0}
+    - target: {fileID: 3461048313594137136, guid: 3b272ea768aafa144ab5f6d647a2c360,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8700564203312659109, guid: 3b272ea768aafa144ab5f6d647a2c360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3807,11 +3817,6 @@ PrefabInstance:
     - target: {fileID: 8700564203312659109, guid: 3b272ea768aafa144ab5f6d647a2c360,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3461048313594137136, guid: 3b272ea768aafa144ab5f6d647a2c360,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6495538789673032768, guid: 3b272ea768aafa144ab5f6d647a2c360,
@@ -4211,7 +4216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696650193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.63, y: 4.6194625, z: 0.9103367}
+  m_LocalPosition: {x: 61.63, y: 4.43, z: 0.9103367}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2137638218}

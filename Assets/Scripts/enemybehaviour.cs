@@ -27,7 +27,7 @@ public class enemybehaviour : MonoBehaviour {
 
 	private float vx;
 	private float vy;
-	private bool facingRight;
+	public bool facingRight;
 	private float oldPosition = 0.0f;
 	private Vector3 normalScale;
 	private Vector3 invertedScale;
@@ -45,6 +45,10 @@ public class enemybehaviour : MonoBehaviour {
 	}
 
 	void Update() {
+		//another timer, yay
+		 if(_dying == true){
+			deathTimer += Time.deltaTime;
+		}
 		//always checking the hp
 		if (health.health <= 0){
 			movable = false;
@@ -98,7 +102,7 @@ public class enemybehaviour : MonoBehaviour {
             if(facingRight == true){
                 transform.localScale = normalScale;
             }
-            if(facingRight == false){
+            else if(facingRight == false){
                 transform.localScale = invertedScale;
             }
         }
@@ -106,6 +110,7 @@ public class enemybehaviour : MonoBehaviour {
 		 animator.SetBool("attacking", _attacking);
 		 animator.SetBool("running", _running);
 		 animator.SetBool("dying", _dying);
+		 animator.SetBool("dead", _dead);
 	}
 	public void Enable(){
 		damager.enabled = true;
