@@ -2,37 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDamage : MonoBehaviour{
+public class EnemyDamage : MonoBehaviour{
 
     public Rigidbody2D rigid;
     public Animator anim;
     public Transform trans;
-    public Transform enemyTrans;   
+    public Transform enemyTrans; 
     public Vector2 normalVelocity;
-    public GameObject audio;   
 
-    public float power = 300f;
+    public float power = 3f;
     public bool knockback;
     public bool damaged;
     public float knockbackDuration = 0.3f;
     private float knockTimer = 0;  
-    
+
     // Start is called before the first frame update
     void Start(){
-    rigid = GetComponent<Rigidbody2D>();
-    trans = GetComponent<Transform>();
-    anim = GetComponent<Animator>(); 
-    normalVelocity = rigid.velocity;   
-    knockback = false;
-    damaged = false;    
+        rigid = GetComponent<Rigidbody2D>();
+        trans = GetComponent<Transform>();
+        anim = GetComponent<Animator>(); 
+        normalVelocity = rigid.velocity;   
+        knockback = false;
+        damaged = false;        
     }
 
     // Update is called once per frame
-    void FixedUpdate(){
-        anim.SetBool("hurt", damaged);
+    void FixedUpdate(){        
         if(knockback == true){
             if(enemyTrans == null){
-                enemyTrans = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+                enemyTrans = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             }
             knockTimer += Time.deltaTime;
             if(knockTimer >= knockbackDuration){
@@ -49,22 +47,13 @@ public class PlayerDamage : MonoBehaviour{
                     rigid.velocity = new Vector2(power, rigid.velocity.y);
                 }
             }                    
-        }        
+        }     
     }
-
     void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Enemy Attack")){        
+        if(other.CompareTag("Player Attack")){        
             knockback = true;
-            damaged = true;
-            audio.active = false;
-            audio.active = true;
-            enemyTrans = other.GetComponent<Transform>();           
+            damaged = true;            
+            enemyTrans = other.GetComponent<Transform>();
         }
-        else if(other.CompareTag("Enemy Spell")){
-            knockback = true;
-            damaged = true;
-            audio.active = false;
-            audio.active = true;
-        }            
-    }
+    }    
 }

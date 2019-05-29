@@ -82,21 +82,7 @@ public class enemybehaviour : MonoBehaviour {
                 movable = false;				     
 			}
 		}
-		//how the hitbox waits between each attack
-		if(_attacking == true){
-			if(attackTimer <= 0){
-				attackTimer = attackCooldown;
-			}
-			else if (attackTimer > 0){
-				attackTimer -= Time.deltaTime;
-				if(attackTimer <= attackCooldown - 0.2f && attackTimer > attackCooldown - 0.8f){
-					damager.enabled = true;					
-				}
-				else {
-					damager.enabled = false;
-				}												
-			}			
-		}		
+					
 		if (transform.position.x > oldPosition) // he's looking right
         {
 			facingRight = true;
@@ -121,7 +107,13 @@ public class enemybehaviour : MonoBehaviour {
 		 animator.SetBool("running", _running);
 		 animator.SetBool("dying", _dying);
 	}
-	
+	public void Enable(){
+		damager.enabled = true;
+	}
+
+	public void Disable(){
+		damager.enabled = false;
+	}
 	
 	public void ChangeDirection(){
 		if (facingRight == false){
@@ -130,5 +122,6 @@ public class enemybehaviour : MonoBehaviour {
 		if (facingRight == true){
 			transform.localScale = normalScale;
 		} 
-	}
+	}	
+	
 }

@@ -132,6 +132,7 @@
     <Compile Include="Assets\Scripts\CameraSeguePersonagem.cs" />
     <Compile Include="Assets\Scripts\DamagingObject.cs" />
     <Compile Include="Assets\Scripts\enemybehaviour.cs" />
+    <Compile Include="Assets\Scripts\EnemyDamage.cs" />
     <Compile Include="Assets\Scripts\FindGate.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />

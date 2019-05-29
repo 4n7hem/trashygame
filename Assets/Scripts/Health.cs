@@ -22,7 +22,7 @@ public class Health : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col) {
 		DamagingObject DO = col.GetComponent<DamagingObject>();
-		if (DO != (null) && col.tag !="Enemy Attack") {
+		if (DO != (null) && col.tag !="Enemy Attack" && col.tag !="Player") {
 			this.health -= DO.Loss;
 		}
 	}

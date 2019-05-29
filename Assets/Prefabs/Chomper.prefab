@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7932790019462484506}
   - component: {fileID: 8217163839557759645}
   - component: {fileID: 3546308916340717121}
+  - component: {fileID: 8277716828366285196}
   m_Layer: 0
   m_Name: Chomper
   m_TagString: Untagged
@@ -258,13 +259,20 @@ MonoBehaviour:
   Target: {fileID: 0}
   rigidbody: {fileID: 7932790019462484506}
   damager: {fileID: 3115266304334079171}
+  health: {fileID: 0}
   speed: 4
   gravity: 9.8
+  attackTimer: 0
+  attackCooldown: 1.33
+  deathTimer: 0
+  deathDuration: 1
   distance: 1
   huntDistance: 8
   _running: 1
   _attacking: 1
   movable: 0
+  _dying: 0
+  _dead: 0
 --- !u!114 &3546308916340717121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +287,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _force: 0
   maxHealth: 4
+  destroyTime: 0
+--- !u!114 &8277716828366285196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790389029433821823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a5691741c34ef4e94695aec3d341bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
