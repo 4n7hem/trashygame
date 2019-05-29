@@ -69,11 +69,11 @@ public class PlayerHealth : MonoBehaviour{
             health -= 1;
         }
     }
-    void PlayerDead(){        
+    public void PlayerDead(){        
         black.active = true;
         control.enabled = false;
     }
-    void OnDeadComplete(){
+    public void OnDeadComplete(){
         continuar.active = true;
         Time.timeScale = 0f;
     }

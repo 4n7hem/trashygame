@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 1
-  Loss: 1
+  Loss: 2
 --- !u!1 &2790389029433821823
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,3 +300,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51a5691741c34ef4e94695aec3d341bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
+  anim: {fileID: 0}
+  trans: {fileID: 0}
+  enemyTrans: {fileID: 0}
+  normalVelocity: {x: 0, y: 0}
+  power: 3
+  knockback: 0
+  damaged: 0
+  knockbackDuration: 0.3

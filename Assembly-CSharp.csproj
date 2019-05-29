@@ -138,6 +138,7 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\InteractionExit.cs" />
     <Compile Include="Assets\Scripts\InteractionTeleport.cs" />
+    <Compile Include="Assets\Scripts\Killzone.cs" />
     <Compile Include="Assets\Scripts\LevelFade.cs" />
     <Compile Include="Assets\Scripts\loadBossOnCollision.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />

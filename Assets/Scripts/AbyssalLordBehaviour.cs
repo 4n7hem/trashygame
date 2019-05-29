@@ -39,6 +39,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public bool _casting;
 	public bool _dying;
 	public bool _dead;
+	public bool beginning;
 
 	private bool magicAble;
 	private float vx;
@@ -63,10 +64,12 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		normalScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		invertedScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);		
         _attacking = false;
-        _running = false;
+        _running = false;		
+		beginning = false;
 	}
 
 	void Update() {
+		if(beginning == true){
 		//health check
 		healthBar.value = health.health;
 		//always checking the hp
@@ -212,6 +215,7 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 		//another timer, yay
 		 if(_dying == true){
 			deathTimer += Time.deltaTime;
+		}
 		}		
 	}
 	
@@ -231,5 +235,9 @@ public class AbyssalLordBehaviour : MonoBehaviour{
 	public void PlayMagicSound(){
 		magicAudio.Play();
 	}
-	
+
+	public void StartEnded(){
+		animator.SetTrigger("BeginEnded");
+		beginning = true;
+	}	
 }
