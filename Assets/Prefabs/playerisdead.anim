@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: playerisdead
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 26e2db9940953084098c7a6d12d7d99a, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: 542cfed09dd98d84f87ba73b754ddcff, type: 3}
+    - time: 0.06666667
+      value: {fileID: 21300000, guid: 141875b8f1599bb41b0506cdfb40fa2e, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: d3d88fd49227cfb4c998f9eac72b8faf, type: 3}
+    - time: 0.13333334
+      value: {fileID: 21300000, guid: f14398d2a6f52f4409ab7a966bd9d3b1, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 698789e30bcc1754086601f24806d403, type: 3}
+    - time: 0.2
+      value: {fileID: 21300000, guid: 10c09b8db1f0c8c48a6c2bba051acf8d, type: 3}
+    - time: 0.23333333
+      value: {fileID: 21300000, guid: 9d86bda7c1fd5ca4a81b59abd5845606, type: 3}
+    - time: 0.26666668
+      value: {fileID: 21300000, guid: 94cf098065ca28e409491e6be5df4ebd, type: 3}
+    - time: 0.3
+      value: {fileID: 21300000, guid: 6ffd5dd1904719e409d745a7707dbb01, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 22f8499715119b34e9eec4e5e4ac928b, type: 3}
+    - time: 0.36666667
+      value: {fileID: 21300000, guid: 2c274d7b6a0193b4c9b46ece4597a9fa, type: 3}
+    - time: 0.4
+      value: {fileID: 21300000, guid: ded340c2df6b6b5489807f851c6901cb, type: 3}
+    - time: 0.68333334
+      value: {fileID: 21300000, guid: ded340c2df6b6b5489807f851c6901cb, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 26e2db9940953084098c7a6d12d7d99a, type: 3}
+    - {fileID: 21300000, guid: 542cfed09dd98d84f87ba73b754ddcff, type: 3}
+    - {fileID: 21300000, guid: 141875b8f1599bb41b0506cdfb40fa2e, type: 3}
+    - {fileID: 21300000, guid: d3d88fd49227cfb4c998f9eac72b8faf, type: 3}
+    - {fileID: 21300000, guid: f14398d2a6f52f4409ab7a966bd9d3b1, type: 3}
+    - {fileID: 21300000, guid: 698789e30bcc1754086601f24806d403, type: 3}
+    - {fileID: 21300000, guid: 10c09b8db1f0c8c48a6c2bba051acf8d, type: 3}
+    - {fileID: 21300000, guid: 9d86bda7c1fd5ca4a81b59abd5845606, type: 3}
+    - {fileID: 21300000, guid: 94cf098065ca28e409491e6be5df4ebd, type: 3}
+    - {fileID: 21300000, guid: 6ffd5dd1904719e409d745a7707dbb01, type: 3}
+    - {fileID: 21300000, guid: 22f8499715119b34e9eec4e5e4ac928b, type: 3}
+    - {fileID: 21300000, guid: 2c274d7b6a0193b4c9b46ece4597a9fa, type: 3}
+    - {fileID: 21300000, guid: ded340c2df6b6b5489807f851c6901cb, type: 3}
+    - {fileID: 21300000, guid: ded340c2df6b6b5489807f851c6901cb, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.7
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.68333334
+    functionName: OnDeadComplete
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

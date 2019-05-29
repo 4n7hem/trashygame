@@ -15,4 +15,9 @@ public class LoadSceneOnClick : MonoBehaviour {
 	public void OnFadeComplete(){
 		SceneManager.LoadScene(level);
 	}
+	public void Reload(){
+		Scene scene = SceneManager.GetActiveScene();
+		SceneManager.LoadScene(scene.name);
+		Time.timeScale = 1f;
+	}
 }
