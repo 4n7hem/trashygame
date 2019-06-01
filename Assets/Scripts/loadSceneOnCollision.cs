@@ -17,7 +17,9 @@ public class loadSceneOnCollision : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.CompareTag("Player")) {
 			isInputOn = false;
-			completeMenuUI.SetActive(true);
+			if(completeMenuUI != null){
+				completeMenuUI.SetActive(true);
+			}
 			Time.timeScale = 0f; 
 		}
 	}

@@ -15,8 +15,13 @@ public class InteractionExit : MonoBehaviour{
     
     void OnTriggerStay2D(Collider2D other){
 		if (Input.GetKeyDown("z")){
-			completeMenuUI.SetActive(true);
-			Time.timeScale = 0f;
+            if(completeMenuUI != null){
+			    completeMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else{
+                LoadLevel();
+            }			
 		}
 	}
 

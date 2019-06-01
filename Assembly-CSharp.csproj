@@ -136,6 +136,7 @@
     <Compile Include="Assets\Scripts\FindGate.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\Illuminati.cs" />
     <Compile Include="Assets\Scripts\InteractionExit.cs" />
     <Compile Include="Assets\Scripts\InteractionTeleport.cs" />
     <Compile Include="Assets\Scripts\Killzone.cs" />
