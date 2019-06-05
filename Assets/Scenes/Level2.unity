@@ -239,6 +239,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 8244200741049848154, guid: 74da045a9ec5c7048a8737b0c20ac7c8,
+        type: 3}
+      propertyPath: scene
+      value: 
+      objectReference: {fileID: 1812267586}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74da045a9ec5c7048a8737b0c20ac7c8, type: 3}
 --- !u!1 &20884063 stripped
@@ -5098,7 +5103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b32f5c138c69994fa563704a48229d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completeMenuUI: {fileID: 20884063}
+  completeMenuUI: {fileID: 0}
   animator: {fileID: 20884064}
   levelAccess: 6
 --- !u!61 &1812267587

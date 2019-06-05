@@ -19,8 +19,11 @@ public class loadSceneOnCollision : MonoBehaviour {
 			isInputOn = false;
 			if(completeMenuUI != null){
 				completeMenuUI.SetActive(true);
+				Time.timeScale = 0f;
 			}
-			Time.timeScale = 0f; 
+			else{
+				this.OnFadeComplete();
+			}			 
 		}
 	}
 
