@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5277d0a15ef0af548a4c2c97198a1da0, type: 3}
+  m_Name: Cuidado
+  m_EditorClassIdentifier: 
+  fala: "Deve tomar muito cuidado com o que lhe aguarda adiante, grandes obstaculos
+    ir\xE3o tentar impedi-lo de alcan\xE7ar sua conquista c\xF4nica..."
+  respostas:
+  - resposta: Tomarei muito cuidado
+    proxFala: {fileID: 11400000, guid: ef2441f4f3d8e9e47a98354cc1f39a9b, type: 2}
+  - resposta: "Cuidado \xE9 para os fracos"
+    proxFala: {fileID: 11400000, guid: c6fcbd91add27f74c9cbf2004022a1b4, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5277d0a15ef0af548a4c2c97198a1da0, type: 3}
+  m_Name: Segredos
+  m_EditorClassIdentifier: 
+  fala: "Depende de quanto tempo voc\xEA vai levar para descubrir... ou, quem sabe,
+    n\xE3o estou apenas mentindo para voc\xEA... "
+  respostas:
+  - resposta: Vou procurar agora
+    proxFala: {fileID: 11400000, guid: ef2441f4f3d8e9e47a98354cc1f39a9b, type: 2}
+  - resposta: "Voc\xEA deve ser um mentiroso"
+    proxFala: {fileID: 11400000, guid: 0134c5083847b9d429b709a9bba276f0, type: 2}

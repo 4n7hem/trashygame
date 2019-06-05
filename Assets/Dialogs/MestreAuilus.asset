@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5277d0a15ef0af548a4c2c97198a1da0, type: 3}
+  m_Name: MestreAuilus
+  m_EditorClassIdentifier: 
+  fala: "Mestre Auilus \xE9 um dominador dos corpos num\xE9ricos, h\xE1 rumores de
+    que ele \xE9 capaz de esbo\xE7ar graficamente qualquer fun\xE7\xE3o que se possa
+    imaginar."
+  respostas:
+  - resposta: Onde posso encontra-lo?
+    proxFala: {fileID: 11400000, guid: 3c0801732943ad54f90395648e86d240, type: 2}
+  - resposta: "\xC9, n\xE3o me parece grande coisa"
+    proxFala: {fileID: 11400000, guid: cf1f4cc01ddd3a242835043e70f0d9c8, type: 2}
+  - resposta: "N\xE3o me fa\xE7a perder mais tempo"
+    proxFala: {fileID: 11400000, guid: 03850ae63170b5548928841607ef1ed5, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5277d0a15ef0af548a4c2c97198a1da0, type: 3}
+  m_Name: CuidadoParaFracos
+  m_EditorClassIdentifier: 
+  fala: "Espero que voc\xEA falhe mizeravelmente em sua jornada at\xE9 as terras de
+    Calculus, onde reside o sabio, por\xE9m n\xE3o muito confiavel, Mestre Auilus "
+  respostas:
+  - resposta: "Quem \xE9 Mestre Auilus?"
+    proxFala: {fileID: 11400000, guid: c983ad9070f9e654bbfaa5ba20a6b60c, type: 2}
+  - resposta: "N\xE3o me fa\xE7a ficar aqui perdendo tempo!"
+    proxFala: {fileID: 11400000, guid: 03850ae63170b5548928841607ef1ed5, type: 2}
